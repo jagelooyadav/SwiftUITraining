@@ -152,6 +152,7 @@
 		16AD064D2809936800F2B46B /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				16AD0649280969D700F2B46B /* QuizHomeView.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -166,7 +167,6 @@
 		16AD064F2809938000F2B46B /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				16AD0649280969D700F2B46B /* QuizHomeView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
