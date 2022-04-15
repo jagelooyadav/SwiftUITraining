@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16AD061B2809504B00F2B46B /* QuizAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD061A2809504B00F2B46B /* QuizAppApp.swift */; };
-		16AD061D2809504B00F2B46B /* QuizHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD061C2809504B00F2B46B /* QuizHomeView.swift */; };
+		16AD061D2809504B00F2B46B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD061C2809504B00F2B46B /* HomeView.swift */; };
 		16AD061F2809504D00F2B46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AD061E2809504D00F2B46B /* Assets.xcassets */; };
 		16AD06222809504D00F2B46B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AD06212809504D00F2B46B /* Preview Assets.xcassets */; };
 		16AD062C2809504D00F2B46B /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD062B2809504D00F2B46B /* QuizAppTests.swift */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		16AD06172809504B00F2B46B /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AD061A2809504B00F2B46B /* QuizAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppApp.swift; sourceTree = "<group>"; };
-		16AD061C2809504B00F2B46B /* QuizHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizHomeView.swift; sourceTree = "<group>"; };
+		16AD061C2809504B00F2B46B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		16AD061E2809504D00F2B46B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16AD06212809504D00F2B46B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		16AD06272809504D00F2B46B /* QuizAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +100,7 @@
 			children = (
 				16AD06442809595900F2B46B /* Reusable Components */,
 				16AD061A2809504B00F2B46B /* QuizAppApp.swift */,
-				16AD061C2809504B00F2B46B /* QuizHomeView.swift */,
+				16AD061C2809504B00F2B46B /* HomeView.swift */,
 				16AD061E2809504D00F2B46B /* Assets.xcassets */,
 				16AD06202809504D00F2B46B /* Preview Content */,
 			);
@@ -271,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16AD061D2809504B00F2B46B /* QuizHomeView.swift in Sources */,
+				16AD061D2809504B00F2B46B /* HomeView.swift in Sources */,
 				16AD061B2809504B00F2B46B /* QuizAppApp.swift in Sources */,
 				16AD06462809597300F2B46B /* QuizImage.swift in Sources */,
 				16AD06482809599C00F2B46B /* AppBackground.swift in Sources */,
