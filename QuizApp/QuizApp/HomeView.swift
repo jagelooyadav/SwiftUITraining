@@ -31,7 +31,7 @@ struct HomeView: View, AppBackground {
                     }.padding(EdgeInsets.init(top: Images.pading, leading: 0, bottom: Images.pading, trailing: 0))
                     ButtonWithNavigationLink(backgroundImageName: Images.game,
                                              height: Images.height) {
-                        QuizHomeView()
+                        GameHome()
                     }
                 }.padding()
             }.navigationBarHidden(false)
