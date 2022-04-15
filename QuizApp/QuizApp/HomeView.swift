@@ -34,7 +34,7 @@ struct HomeView: View, AppBackground {
                         QuizHomeView()
                     }
                 }.padding()
-            }.navigationBarHidden(true)
+            }.navigationBarHidden(false)
                 .navigationViewStyle(.stack)
         }
     }

@@ -102,12 +102,14 @@
 		16AD06192809504B00F2B46B /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				16AD064F2809938000F2B46B /* Game */,
+				16AD064E2809937000F2B46B /* Dictionary */,
+				16AD064D2809936800F2B46B /* Quiz */,
 				16AD06442809595900F2B46B /* Reusable Components */,
 				16AD061A2809504B00F2B46B /* QuizAppApp.swift */,
 				16AD061C2809504B00F2B46B /* HomeView.swift */,
 				16AD061E2809504D00F2B46B /* Assets.xcassets */,
 				16AD06202809504D00F2B46B /* Preview Content */,
-				16AD0649280969D700F2B46B /* QuizHomeView.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -145,6 +147,28 @@
 				16AD064B28098A8600F2B46B /* ButtonWithNavigationLink.swift */,
 			);
 			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+		16AD064D2809936800F2B46B /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		16AD064E2809937000F2B46B /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		16AD064F2809938000F2B46B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				16AD0649280969D700F2B46B /* QuizHomeView.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
