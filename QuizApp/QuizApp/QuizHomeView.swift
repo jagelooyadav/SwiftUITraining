@@ -1,13 +1,14 @@
 //
-//  ContentView.swift
+//  QuizHomeView.swift
 //  QuizApp
 //
 //  Created by Jageloo Yadav on 15/04/22.
 //
 
+import Foundation
 import SwiftUI
 
-struct HomeView: View, AppBackground {
+struct QuizHomeView: View, AppBackground {
     private enum Images {
         static let quiz = "quiz-bttn-i"
         static let dictionary = "dic-bttn-i"
@@ -15,23 +16,18 @@ struct HomeView: View, AppBackground {
         static let height: CGFloat = 70.0
         static let pading: CGFloat = 10.0
     }
-
+    
     var body: some View {
         NavigationView {
             ZStack(alignment: .center) {
                 background.ignoresSafeArea()
                 VStack(spacing: 0) {
-                    ButtonWithNavigationLink(backgroundImageName: Images.quiz,
-                                             height: Images.height) {
-                        QuizHomeView()
-                    }
-                    ButtonWithNavigationLink(backgroundImageName: Images.dictionary,
-                                             height: Images.height) {
-                        QuizHomeView()
+                    
+                    Button(action: {}) {
+                        QuizImage(Images.dictionary, height: Images.height)
                     }.padding(EdgeInsets.init(top: Images.pading, leading: 0, bottom: Images.pading, trailing: 0))
-                    ButtonWithNavigationLink(backgroundImageName: Images.game,
-                                             height: Images.height) {
-                        QuizHomeView()
+                    Button(action: {}) {
+                        QuizImage(Images.game, height: Images.height)
                     }
                 }.padding()
             }.navigationBarHidden(true)
@@ -40,9 +36,8 @@ struct HomeView: View, AppBackground {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView1_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        QuizHomeView()
     }
 }
-
