@@ -24,7 +24,7 @@ struct QuizNavigationLinkButton<Content: View>: View {
             NavigationLink.init(destination: {
                 destination()
             }) {
-                Image(imageName).resizable().aspectRatio(contentMode: .fit)
+                Image(imageName).resizable().aspectRatio(contentMode: .fit).frame(height: 60.0)
             }
         }
     }
