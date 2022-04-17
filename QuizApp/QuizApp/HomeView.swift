@@ -20,22 +20,20 @@ struct HomeView: View, AppBackground {
         NavigationView {
             ZStack(alignment: .center) {
                 background.ignoresSafeArea()
-                VStack(spacing: 0) {
-                    ButtonWithNavigationLink(backgroundImageName: Images.quiz,
-                                             height: Images.height) {
+                
+                VStack {
+                    QuizNavigationLinkButton(destination: {
                         QuizHomeView()
-                    }
-                    ButtonWithNavigationLink(backgroundImageName: Images.dictionary,
-                                             height: Images.height) {
-                        QuizHomeView()
-                    }.padding(EdgeInsets.init(top: Images.pading, leading: 0, bottom: Images.pading, trailing: 0))
-                    ButtonWithNavigationLink(backgroundImageName: Images.game,
-                                             height: Images.height) {
+                    }, imageName: Images.quiz)
+                    
+                    QuizNavigationLinkButton(destination: {
+                        DictionaryHome()
+                    }, imageName: Images.dictionary)
+                    QuizNavigationLinkButton(destination: {
                         GameHome()
-                    }
+                    }, imageName: Images.game)
                 }.padding()
-            }.navigationBarHidden(false)
-                .navigationViewStyle(.stack)
+            }
         }
     }
 }
