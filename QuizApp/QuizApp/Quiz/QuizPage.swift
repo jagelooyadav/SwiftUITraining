@@ -32,6 +32,9 @@ struct QuizPage: View, AppBackground {
                     }
                     Text("1 of 10").foregroundColor(AppTheme.orange)
                 }
+            }.onAppear() {
+                print("View did Appear")
+                viewModel.observeQuestionSelection()
             }
         
         }

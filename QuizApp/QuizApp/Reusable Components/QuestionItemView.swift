@@ -7,23 +7,27 @@
 
 import SwiftUI
 
-protocol QuestionItemViewData {
+protocol QuestionItemViewData: ObservableObject {
+    associatedtype Object: QuestionItemViewData
     var title: String { get }
     var index: Int { get }
-    var isSelected: Bool { get }
+    var isSelected: Bool { get set }
+    var action: ((Object) -> Void)? { get set }
 }
 
-struct QuestionItemView: View {
-    private let data: QuestionItemViewData
-    init(data: QuestionItemViewData) {
+struct QuestionItemView<Item: QuestionItemViewData>: View {
+    @ObservedObject private var data: Item
+    init(data: Item) {
         self.data = data
     }
     
     var body: some View {
         HStack {
-            Image(systemName: data.isSelected ? "dot.circle" : "circle").foregroundColor(.white)
-            Text(String(format: "%C:", 65 + data.index)).bold().foregroundColor(.white)
-            Text(data.title).font(Font.body).foregroundColor(.white)
+            Button(action: { data.action?(data as! Item.Object) }) {
+                Image(systemName: data.isSelected ? "dot.circle" : "circle").foregroundColor(.white)
+                Text(String(format: "%C:", 65 + data.index)).bold().foregroundColor(.white)
+                Text(data.title).font(Font.body).foregroundColor(.white)
+            }
         }
     }
 }

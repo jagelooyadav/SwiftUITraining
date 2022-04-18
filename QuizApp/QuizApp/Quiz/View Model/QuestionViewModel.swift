@@ -7,11 +7,11 @@
 
 import Foundation
 
-class QuestionViewModel: QuestionViewData {
+class QuestionViewModel: QuestionViewData, ObservableObject {
     @Published var question: String
-    @Published var choices: [QuestionItemViewData]
+    @Published var choices: [QuestionItemViewModel]
     
-    init(question: String, choices: [QuestionItemViewData]) {
+    init(question: String, choices: [QuestionItemViewModel]) {
         self.question = question
         self.choices = choices
     }

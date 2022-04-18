@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-protocol QuestionViewData {
+protocol QuestionViewData: ObservableObject {
+    associatedtype QuestionItem: QuestionItemViewData
     var question: String { get }
-    var choices: [QuestionItemViewData] { get }
+    var choices: [Self.QuestionItem] { get }
 }
 
-struct QuestionView: View {
+struct QuestionView<Question: QuestionViewData>: View {
     
-    private let data: QuestionViewData
+    @ObservedObject private var data: Question
     
-    init(data: QuestionViewData) {
+    init(data: Question) {
         self.data = data
     }
     
