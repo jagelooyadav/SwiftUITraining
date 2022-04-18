@@ -15,19 +15,29 @@ struct QuizPage: View, AppBackground {
     }
     
     var body: some View {
-        ZStack(alignment: .topLeading) {
+        ZStack(alignment: .top) {
             background.ignoresSafeArea()
             createContent()
+            Spacer()
         }.customNavigationTitle("Qustions", backAction: { dismiss() })
     }
     
     private func createContent() -> some View {
-        VStack(alignment: .leading) {
-            QuestionView(data: QuestionViewModel(question: "hey how are you?", choices: [QuestionItemViewModel(title: "You am fine", isSelected: true, index: 0),
-                                                                                         QuestionItemViewModel(title: "You am tired", isSelected: false, index: 1),
-                                                                                         QuestionItemViewModel(title: "You am hungry", isSelected: false, index: 2),
-                                                                                         QuestionItemViewModel(title: "You are not fine", isSelected: false, index: 3)
-                                                                                        ]))
+        VStack(alignment: .center) {
+            VStack(alignment: .center, spacing: 30) {
+                QuestionView(data: QuestionViewModel(question: "hey how are you?", choices: [QuestionItemViewModel(title: "You am fine", isSelected: true, index: 0),
+                                                                                             QuestionItemViewModel(title: "You am tired", isSelected: false, index: 1),
+                                                                                             QuestionItemViewModel(title: "You am hungry", isSelected: false, index: 2),
+                                                                                             QuestionItemViewModel(title: "You are not fine", isSelected: false, index: 3)
+                                                                                            ]))
+                HStack(spacing: 30.0) {
+                    RoundedButton(title: "Next") {
+                        print("Click")
+                    }
+                    Text("1 of 10").foregroundColor(AppTheme.orange)
+                }
+            }
+        
         }
     }
 }

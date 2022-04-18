@@ -14,6 +14,13 @@ protocol AppBackground {
 
 extension AppBackground {
     var background: Color {
-        return Color(red: 50.0/255.0, green: 150.0/255.0, blue: 250.0/255.0, opacity: 1.0)
+        return AppTheme.blueBackground
     }
 }
+
+enum AppTheme {
+    static let orange = Color(red: 242.0/255.0, green: 104.0/255.0, blue: 28.0/255.0)
+    static let blueBackground = Color(red: 50.0/255.0, green: 150.0/255.0, blue: 250.0/255.0, opacity: 1.0)
+    static let blueBorder = Color(red: 41.0/255.0, green: 120.0/255.0, blue: 200.0/255.0)
+}
+
