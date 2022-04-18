@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct QuizHomeView: View, AppBackground {
-    
+    @Environment(\.dismiss) private var dismiss
     private enum Images {
         static let wordQuiz = "word_big"
         static let definitionQuiz = "definition-bttn-5"
@@ -18,16 +18,20 @@ struct QuizHomeView: View, AppBackground {
     var body: some View {
         ZStack(alignment: .center) {
             background.ignoresSafeArea()
-            VStack {
-                QuizNavigationLinkButton(destination: {
-                    QuizHomeView()
-                }, imageName: Images.wordQuiz)
-                
-                QuizNavigationLinkButton(destination: {
-                    DictionaryHome()
-                }, imageName: Images.definitionQuiz)
-            }.padding()
-        }.navigationBarHidden(false).navigationTitle("Quiz").navigationBarTitleDisplayMode(.inline)
+            createButtons()
+        }.customNavigationTitle("Quiz", backAction: { dismiss() })
+    }
+    
+    private func createButtons() -> some View {
+        VStack {
+            QuizNavigationLinkButton(destination: {
+                QuizHomeView()
+            }, imageName: Images.wordQuiz)
+            
+            QuizNavigationLinkButton(destination: {
+                DictionaryHome()
+            }, imageName: Images.definitionQuiz)
+        }.padding()
     }
 }
 

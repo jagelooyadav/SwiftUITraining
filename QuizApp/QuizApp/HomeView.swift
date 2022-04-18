@@ -32,7 +32,7 @@ struct HomeView: View, AppBackground {
                     }, imageName: Images.game)
                 }.padding()
             }
-        }
+        }.accentColor(.white)
     }
 }
 

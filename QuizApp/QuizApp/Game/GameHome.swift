@@ -9,10 +9,11 @@ import Foundation
 import SwiftUI
 
 struct GameHome: View, AppBackground {
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         ZStack(alignment: .center) {
             background.ignoresSafeArea()
-        }.navigationBarHidden(false).navigationTitle("Game").navigationBarTitleDisplayMode(.inline)
+        }.customNavigationTitle("Dictionary", backAction: { dismiss()})
     }
 }
 

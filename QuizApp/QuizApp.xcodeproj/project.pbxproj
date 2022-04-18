@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16512231280D533000EC5936 /* CustomNavigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16512230280D533000EC5936 /* CustomNavigationTitle.swift */; };
 		16AD061B2809504B00F2B46B /* QuizAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD061A2809504B00F2B46B /* QuizAppApp.swift */; };
 		16AD061D2809504B00F2B46B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD061C2809504B00F2B46B /* HomeView.swift */; };
 		16AD061F2809504D00F2B46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AD061E2809504D00F2B46B /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16512230280D533000EC5936 /* CustomNavigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationTitle.swift; sourceTree = "<group>"; };
 		16AD06172809504B00F2B46B /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AD061A2809504B00F2B46B /* QuizAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppApp.swift; sourceTree = "<group>"; };
 		16AD061C2809504B00F2B46B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				16AD06452809597200F2B46B /* QuizImage.swift */,
 				16AD06472809599C00F2B46B /* AppBackground.swift */,
 				16AD064B28098A8600F2B46B /* QuizNavigationLinkButton.swift */,
+				16512230280D533000EC5936 /* CustomNavigationTitle.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				16AD061D2809504B00F2B46B /* HomeView.swift in Sources */,
 				16AD064A280969D700F2B46B /* QuizHomeView.swift in Sources */,
 				16AD061B2809504B00F2B46B /* QuizAppApp.swift in Sources */,
+				16512231280D533000EC5936 /* CustomNavigationTitle.swift in Sources */,
 				16AD0651280995DD00F2B46B /* DictionaryHome.swift in Sources */,
 				16AD0653280995EA00F2B46B /* GameHome.swift in Sources */,
 				16AD06462809597300F2B46B /* QuizImage.swift in Sources */,
