@@ -5,7 +5,6 @@
 //  Created by Jageloo Yadav on 15/04/22.
 //
 
-import Foundation
 import SwiftUI
 
 struct QuizHomeView: View, AppBackground {
@@ -25,7 +24,7 @@ struct QuizHomeView: View, AppBackground {
     private func createButtons() -> some View {
         VStack {
             QuizNavigationLinkButton(destination: {
-                QuizHomeView()
+                QuizPage()
             }, imageName: Images.wordQuiz)
             
             QuizNavigationLinkButton(destination: {
