@@ -30,7 +30,10 @@ struct QuizPage: View, AppBackground {
                                                                                              QuestionItemViewModel(title: "You am hungry", isSelected: false, index: 2),
                                                                                              QuestionItemViewModel(title: "You are not fine", isSelected: false, index: 3)
                                                                                             ]))
-                HStack(spacing: 30.0) {
+                HStack(spacing: 20.0) {
+                    RoundedButton(title: "Prev") {
+                        print("Click")
+                    }
                     RoundedButton(title: "Next") {
                         print("Click")
                     }

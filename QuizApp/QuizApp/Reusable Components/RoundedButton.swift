@@ -25,7 +25,7 @@ struct RoundedButton: View {
     var body: some View {
         VStack(alignment: .center) {
             Button.init(action: action) {
-                Text(title).padding(EdgeInsets.init(top: 10.0, leading: 60.0, bottom: 10.0, trailing: 60.0)).font(Font.headline.bold())
+                Text(title).padding(EdgeInsets.init(top: 10.0, leading: 30.0, bottom: 10.0, trailing: 30.0)).font(Font.headline.bold())
             }.background(backgroundColor).cornerRadius(22.0).overlay(RoundedRectangle(cornerRadius: 22.0)
                 .stroke(AppTheme.blueBorder, lineWidth: 5))
         }
