@@ -12,7 +12,7 @@ protocol QuestionItemViewData: ObservableObject {
     var title: String { get }
     var index: Int { get }
     var isSelected: Bool { get set }
-    var action: ((Object) -> Void)? { get set }
+    var action: ((Self.Object?) -> Void)? { get set }
 }
 
 struct QuestionItemView<Item: QuestionItemViewData>: View {
@@ -23,7 +23,7 @@ struct QuestionItemView<Item: QuestionItemViewData>: View {
     
     var body: some View {
         HStack {
-            Button(action: { data.action?(data as! Item.Object) }) {
+            Button(action: { data.action?(data as? Item.Object) }) {
                 Image(systemName: data.isSelected ? "dot.circle" : "circle").foregroundColor(.white)
                 Text(String(format: "%C:", 65 + data.index)).bold().foregroundColor(.white)
                 Text(data.title).font(Font.body).foregroundColor(.white)

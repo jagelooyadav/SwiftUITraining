@@ -13,6 +13,7 @@ class QuizPageViewModel {
     func observeQuestionSelection() {
         for question in currentQuestion.choices {
             question.action = { questionItemData in
+                guard let questionItemData = questionItemData else { return }
                 if questionItemData.isSelected {
                     // Nothing to do
                 } else {
