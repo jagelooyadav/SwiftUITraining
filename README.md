@@ -13,5 +13,4 @@ Day1 - https://www.youtube.com/watch?v=UJ9js4uUUfM&t=1881s
 ![Day2](https://user-images.githubusercontent.com/2247603/163861394-5fb934fa-e6c5-4b41-9261-f6dc865c8097.png)
 
 Day2 Video Link
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3LD1qyQYBBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/3LD1qyQYBBM
