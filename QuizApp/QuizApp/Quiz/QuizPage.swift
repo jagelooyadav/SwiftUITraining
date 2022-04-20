@@ -30,7 +30,7 @@ struct QuizPage: View, AppBackground {
                 HStack(spacing: 20.0) {
                     if viewModel.shouldShowPrev {
                         RoundedButton(title: "Prev") {
-                            print("Click")
+                            viewModel.goToPrevious()
                         }
                     }
                     RoundedButton(title: viewModel.shouldShowNext ? "Next" : "Submit") {
@@ -40,7 +40,7 @@ struct QuizPage: View, AppBackground {
                         } else {
                             // Submit action
                         }
-                    }.hide(falg: false)
+                    }.disabled(viewModel.shouldDisableNextButton)
                     
                     Text( "\(viewModel.questions.count)" + " of 10").foregroundColor(AppTheme.orange)
                 }.padding(EdgeInsets.init(top: 0, leading: 0, bottom: 50, trailing: 0))

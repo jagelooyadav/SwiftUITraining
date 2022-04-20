@@ -10,15 +10,17 @@ import Foundation
 class QuizPageViewModel: ObservableObject {
     @Published var questions: [QuestionViewModel] = []
     @Published private var randomWord: [String: String] = [:]
-    private var currentQuestionIndex = 0
+    @Published private var currentQuestionIndex = -1
     
     var shouldShowNext: Bool {
         return questions.count < 10
     }
     
     var shouldShowPrev: Bool {
-        questions.count > 1
+        currentQuestionIndex > 0
     }
+    
+    @Published var shouldDisableNextButton: Bool = true
     
     func reset() {
         questions.removeAll()
@@ -34,6 +36,7 @@ class QuizPageViewModel: ObservableObject {
                     // Nothing to do
                 } else {
                     questionItemData.isSelected = true
+                    self.shouldDisableNextButton = false
                     let remainigns = currentQuestion.choices.filter { $0.index != questionItemData.index }
                     for item in remainigns {
                         item.isSelected = false
@@ -44,7 +47,7 @@ class QuizPageViewModel: ObservableObject {
     }
     
     func fetchQuestionAndAnswers() {
-        if currentQuestionIndex < self.questions.count - 1 {
+        if currentQuestionIndex < self.questions.count - 2 {
             currentQuestionIndex = currentQuestionIndex + 1
             self.currentQuestion = self.questions[currentQuestionIndex]
             return
@@ -73,6 +76,8 @@ class QuizPageViewModel: ObservableObject {
                        self.currentQuestion = newQ
                        self.questions.append(newQ)
                        print("questions.count === \(questions.count)")
+                       currentQuestionIndex = questions.count - 1
+                       shouldDisableNextButton = true
                    }
                }
                
@@ -83,8 +88,9 @@ class QuizPageViewModel: ObservableObject {
     }
     
     func goToPrevious() {
-        currentQuestionIndex = currentQuestionIndex - 1
+        currentQuestionIndex = currentQuestionIndex > 0 ? currentQuestionIndex - 1 : 0
         self.currentQuestion = self.questions[currentQuestionIndex]
+        shouldDisableNextButton = self.currentQuestion?.choices.filter { $0.isSelected }.isEmpty ?? false
     }
     
     @Published var currentQuestion: QuestionViewModel?
