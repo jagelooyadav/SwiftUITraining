@@ -20,7 +20,9 @@ struct QuizNavigationLinkButton<Content: View>: View {
         self.imageName = imageName
     }
     var body: some View {
-        Button(action: {}) {
+        Button(action: {
+            print("I am clicking here")
+        }) {
             NavigationLink.init(destination: {
                 destination()
             }) {

@@ -26,17 +26,27 @@ struct QuizPage: View, AppBackground {
                 if let currentQuestion = viewModel.currentQuestion {
                     QuestionView(data: currentQuestion)
                 }
+                Spacer()
                 HStack(spacing: 20.0) {
-                    RoundedButton(title: "Prev") {
-                        print("Click")
+                    if viewModel.shouldShowPrev {
+                        RoundedButton(title: "Prev") {
+                            print("Click")
+                        }
                     }
-                    RoundedButton(title: "Next") {
-                        print("Click")
+                    RoundedButton(title: viewModel.shouldShowNext ? "Next" : "Submit") {
+                        if viewModel.shouldShowNext {
+                            self.viewModel.fetchQuestionAndAnswers()
+                            viewModel.observeQuestionSelection()
+                        } else {
+                            // Submit action
+                        }
                     }.hide(falg: false)
-                    Text("1 of 10").foregroundColor(AppTheme.orange)
-                }
+                    
+                    Text( "\(viewModel.questions.count)" + " of 10").foregroundColor(AppTheme.orange)
+                }.padding(EdgeInsets.init(top: 0, leading: 0, bottom: 50, trailing: 0))
+                
             }.onAppear() {
-                print("View did Appear")
+                viewModel.reset()
                 self.viewModel.fetchQuestionAndAnswers()
                 viewModel.observeQuestionSelection()
             }

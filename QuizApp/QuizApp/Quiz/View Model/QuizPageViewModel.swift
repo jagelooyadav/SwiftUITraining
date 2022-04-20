@@ -10,6 +10,20 @@ import Foundation
 class QuizPageViewModel: ObservableObject {
     @Published var questions: [QuestionViewModel] = []
     @Published private var randomWord: [String: String] = [:]
+    private var currentQuestionIndex = 0
+    
+    var shouldShowNext: Bool {
+        return questions.count < 10
+    }
+    
+    var shouldShowPrev: Bool {
+        questions.count > 1
+    }
+    
+    func reset() {
+        questions.removeAll()
+        currentQuestionIndex = 0
+    }
     
     func observeQuestionSelection() {
         guard let currentQuestion = currentQuestion else { return }
@@ -30,6 +44,11 @@ class QuizPageViewModel: ObservableObject {
     }
     
     func fetchQuestionAndAnswers() {
+        if currentQuestionIndex < self.questions.count - 1 {
+            currentQuestionIndex = currentQuestionIndex + 1
+            self.currentQuestion = self.questions[currentQuestionIndex]
+            return
+        }
         if let url = Bundle.main.url(forResource:"dictionary", withExtension: "plist") {
            do {
              let data = try Data(contentsOf:url)
@@ -41,7 +60,7 @@ class QuizPageViewModel: ObservableObject {
                    self.randomWord = randomWord
                    if let answers = ans, let randomQuestionHeading = randomWord["description"] {
                        var index = 0
-                       let questions: [QuestionItemViewModel] = answers.compactMap { dictionary in
+                       let questionsTemp: [QuestionItemViewModel] = answers.compactMap { dictionary in
                            if let word = dictionary["word"] {
                                let item = QuestionItemViewModel(title: word, isSelected: false, index: index)
                                index += 1
@@ -49,7 +68,11 @@ class QuizPageViewModel: ObservableObject {
                            }
                            return nil
                        }
-                       self.currentQuestion = QuestionViewModel(question: randomQuestionHeading, choices: questions)
+                       let newQ = QuestionViewModel(question: randomQuestionHeading, choices: questionsTemp)
+                       print("new qustion has been created === \(newQ)")
+                       self.currentQuestion = newQ
+                       self.questions.append(newQ)
+                       print("questions.count === \(questions.count)")
                    }
                }
                
@@ -57,6 +80,11 @@ class QuizPageViewModel: ObservableObject {
               print(error)
            }
         }
+    }
+    
+    func goToPrevious() {
+        currentQuestionIndex = currentQuestionIndex - 1
+        self.currentQuestion = self.questions[currentQuestionIndex]
     }
     
     @Published var currentQuestion: QuestionViewModel?
