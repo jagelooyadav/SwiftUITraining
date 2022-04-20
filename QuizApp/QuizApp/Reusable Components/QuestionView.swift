@@ -11,6 +11,7 @@ protocol QuestionViewData: ObservableObject {
     associatedtype QuestionItem: QuestionItemViewData
     var question: String { get }
     var choices: [Self.QuestionItem] { get }
+    var answer: String { get }
 }
 
 struct QuestionView<Question: QuestionViewData>: View {

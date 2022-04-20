@@ -29,6 +29,8 @@
 		16AD064C28098A8600F2B46B /* QuizNavigationLinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD064B28098A8600F2B46B /* QuizNavigationLinkButton.swift */; };
 		16AD0651280995DD00F2B46B /* DictionaryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD0650280995DD00F2B46B /* DictionaryHome.swift */; };
 		16AD0653280995EA00F2B46B /* GameHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD0652280995EA00F2B46B /* GameHome.swift */; };
+		16E0C44728107C6B001858A6 /* QuizResultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E0C44628107C6B001858A6 /* QuizResultPage.swift */; };
+		16E0C44928107D5E001858A6 /* QuizResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E0C44828107D5E001858A6 /* QuizResultViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		16AD064B28098A8600F2B46B /* QuizNavigationLinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNavigationLinkButton.swift; sourceTree = "<group>"; };
 		16AD0650280995DD00F2B46B /* DictionaryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHome.swift; sourceTree = "<group>"; };
 		16AD0652280995EA00F2B46B /* GameHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHome.swift; sourceTree = "<group>"; };
+		16E0C44628107C6B001858A6 /* QuizResultPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultPage.swift; sourceTree = "<group>"; };
+		16E0C44828107D5E001858A6 /* QuizResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				16512239280D8BA000EC5936 /* QuestionViewModel.swift */,
 				1651223D280D966100EC5936 /* QuestionItemViewModel.swift */,
 				16512241280DE93800EC5936 /* QuizPageViewModel.swift */,
+				16E0C44828107D5E001858A6 /* QuizResultViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				16512238280D8B8600EC5936 /* View Model */,
 				16AD0649280969D700F2B46B /* QuizHomeView.swift */,
 				16512234280D72E800EC5936 /* QuizPage.swift */,
+				16E0C44628107C6B001858A6 /* QuizResultPage.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E0C44728107C6B001858A6 /* QuizResultPage.swift in Sources */,
 				16AD061D2809504B00F2B46B /* HomeView.swift in Sources */,
 				16512240280DC02A00EC5936 /* RoundedButton.swift in Sources */,
 				1651223C280D961400EC5936 /* QuestionItemView.swift in Sources */,
@@ -350,6 +357,7 @@
 				16512242280DE93800EC5936 /* QuizPageViewModel.swift in Sources */,
 				1651223E280D966100EC5936 /* QuestionItemViewModel.swift in Sources */,
 				16AD061B2809504B00F2B46B /* QuizAppApp.swift in Sources */,
+				16E0C44928107D5E001858A6 /* QuizResultViewModel.swift in Sources */,
 				16512231280D533000EC5936 /* CustomNavigationTitle.swift in Sources */,
 				16AD0651280995DD00F2B46B /* DictionaryHome.swift in Sources */,
 				16AD0653280995EA00F2B46B /* GameHome.swift in Sources */,

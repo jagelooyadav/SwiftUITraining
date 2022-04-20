@@ -36,6 +36,7 @@ class QuizPageViewModel: ObservableObject {
                     // Nothing to do
                 } else {
                     questionItemData.isSelected = true
+                    currentQuestion.isAnsweredCorrectly = questionItemData.title == currentQuestion.answer
                     self.shouldDisableNextButton = false
                     let remainigns = currentQuestion.choices.filter { $0.index != questionItemData.index }
                     for item in remainigns {
@@ -61,7 +62,7 @@ class QuizPageViewModel: ObservableObject {
                    var ans = words.randomSelection(count: 4)
                    ans?.insert(randomWord, at: Int(arc4random()) % 4)
                    self.randomWord = randomWord
-                   if let answers = ans, let randomQuestionHeading = randomWord["description"] {
+                   if let answers = ans, let randomQuestionHeading = randomWord["description"], let answer = randomWord["word"] {
                        var index = 0
                        let questionsTemp: [QuestionItemViewModel] = answers.compactMap { dictionary in
                            if let word = dictionary["word"] {
@@ -71,7 +72,7 @@ class QuizPageViewModel: ObservableObject {
                            }
                            return nil
                        }
-                       let newQ = QuestionViewModel(question: randomQuestionHeading, choices: questionsTemp)
+                       let newQ = QuestionViewModel(question: randomQuestionHeading, choices: questionsTemp, answer: answer)
                        print("new qustion has been created === \(newQ)")
                        self.currentQuestion = newQ
                        self.questions.append(newQ)

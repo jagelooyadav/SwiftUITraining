@@ -10,7 +10,7 @@ import SwiftUI
 struct QuizPage: View, AppBackground {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var viewModel = QuizPageViewModel()
-    
+    @State var isRsultPageActive = false
     var body: some View {
         ZStack(alignment: .top) {
             background.ignoresSafeArea()
@@ -33,12 +33,14 @@ struct QuizPage: View, AppBackground {
                             viewModel.goToPrevious()
                         }
                     }
+                    NavigationLink(isActive: $isRsultPageActive, destination: { QuizResultPage(questions: viewModel.questions)},
+                                   label: { EmptyView() })
                     RoundedButton(title: viewModel.shouldShowNext ? "Next" : "Submit") {
                         if viewModel.shouldShowNext {
                             self.viewModel.fetchQuestionAndAnswers()
                             viewModel.observeQuestionSelection()
                         } else {
-                            // Submit action
+                            isRsultPageActive = true
                         }
                     }.disabled(viewModel.shouldDisableNextButton)
                     
