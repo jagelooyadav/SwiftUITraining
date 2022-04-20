@@ -22,7 +22,7 @@ struct QuestionItemView<Item: QuestionItemViewData>: View {
     }
     
     var body: some View {
-        HStack {
+        HStack() {
             Button(action: { data.action?(data as? Item.Object) }) {
                 Image(systemName: data.isSelected ? "dot.circle" : "circle").foregroundColor(.white)
                 Text(String(format: "%C:", 65 + data.index)).bold().foregroundColor(.white)

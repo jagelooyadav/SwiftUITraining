@@ -12,16 +12,26 @@ enum ButtonType {
     case secondary
 }
 
-struct RoundedButton: View {
+struct RoundedButton: View  {
     private let title: String
     private let action: () -> Void
     private let backgroundColor: Color
+    @State var hiden = false
     init(title: String,
          backgroundColor: Color = AppTheme.orange, action: @escaping () -> Void) {
         self.title = title
         self.action = action
         self.backgroundColor = backgroundColor
     }
+    
+    @ViewBuilder func hide(falg: Bool) -> some View {
+        if hiden {
+            self.hidden()
+        } else {
+            self
+        }
+    }
+    
     var body: some View {
         VStack(alignment: .center) {
             Button.init(action: action) {
