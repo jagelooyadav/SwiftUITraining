@@ -18,7 +18,9 @@ struct QuizPage: View, AppBackground {
             Spacer()
         }.customNavigationTitle(viewModel.screenTitle, backAction: { dismiss() })
     }
-    
+}
+
+extension QuizPage {
     @ViewBuilder
     private func createContent() -> some View {
         VStack(alignment: .center) {
@@ -54,10 +56,5 @@ struct QuizPage: View, AppBackground {
             }
         }
     }
-}
 
-struct QuizPage_Previews: PreviewProvider {
-    static var previews: some View {
-        QuizPage()
-    }
 }
