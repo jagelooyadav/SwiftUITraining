@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		16512231280D533000EC5936 /* CustomNavigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16512230280D533000EC5936 /* CustomNavigationTitle.swift */; };
-		16512233280D71A500EC5936 /* dictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16512232280D71A500EC5936 /* dictionary.plist */; };
 		16512235280D72E800EC5936 /* QuizPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16512234280D72E800EC5936 /* QuizPage.swift */; };
 		16512237280D827400EC5936 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16512236280D827400EC5936 /* QuestionView.swift */; };
 		1651223A280D8BA000EC5936 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16512239280D8BA000EC5936 /* QuestionViewModel.swift */; };
@@ -52,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		16512230280D533000EC5936 /* CustomNavigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationTitle.swift; sourceTree = "<group>"; };
-		16512232280D71A500EC5936 /* dictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dictionary.plist; sourceTree = "<group>"; };
 		16512234280D72E800EC5936 /* QuizPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage.swift; sourceTree = "<group>"; };
 		16512236280D827400EC5936 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		16512239280D8BA000EC5936 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				16AD064D2809936800F2B46B /* Quiz */,
 				16AD06442809595900F2B46B /* Reusable Components */,
 				16AD061A2809504B00F2B46B /* QuizAppApp.swift */,
-				16512232280D71A500EC5936 /* dictionary.plist */,
 				16AD061C2809504B00F2B46B /* HomeView.swift */,
 				16AD061E2809504D00F2B46B /* Assets.xcassets */,
 				16AD06202809504D00F2B46B /* Preview Content */,
@@ -324,7 +321,6 @@
 			files = (
 				16AD06222809504D00F2B46B /* Preview Assets.xcassets in Resources */,
 				16AD061F2809504D00F2B46B /* Assets.xcassets in Resources */,
-				16512233280D71A500EC5936 /* dictionary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

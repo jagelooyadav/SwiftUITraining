@@ -28,7 +28,7 @@ struct QuizHomeView: View, AppBackground {
             }, imageName: Images.wordQuiz)
             
             QuizNavigationLinkButton(destination: {
-                DictionaryHome()
+                QuizPage()
             }, imageName: Images.definitionQuiz)
         }.padding()
     }

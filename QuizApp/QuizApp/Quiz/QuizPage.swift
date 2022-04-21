@@ -16,7 +16,7 @@ struct QuizPage: View, AppBackground {
             background.ignoresSafeArea()
             createContent()
             Spacer()
-        }.customNavigationTitle(viewModel.screenTitle, backAction: { dismiss() })
+        }.customNavigationTitle("Quiz", backAction: { dismiss() })
     }
 }
 
