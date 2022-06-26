@@ -24,7 +24,7 @@ struct QuestionView<Question: QuestionViewData>: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20.0) {
-            Text(data.question).font(Font.title3).bold().foregroundColor(.white)
+            Text(data.question).font(Font.title3).bold().foregroundColor(.black)
             ForEach(0..<data.choices.count, id: \.self) { index in
                 QuestionItemView(data: self.data.choices[index])
                         }

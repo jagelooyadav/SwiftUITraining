@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuizHomeView: View, AppBackground {
     @Environment(\.dismiss) private var dismiss
+
     private enum Images {
         static let wordQuiz = "word_big"
         static let definitionQuiz = "definition-bttn-5"
@@ -24,11 +25,11 @@ struct QuizHomeView: View, AppBackground {
     private func createButtons() -> some View {
         VStack {
             QuizNavigationLinkButton(destination: {
-                QuizPage()
+                QuizPage().environmentObject(ButtonProperties())
             }, imageName: Images.wordQuiz)
             
             QuizNavigationLinkButton(destination: {
-                QuizPage()
+                QuizPage().environmentObject(ButtonProperties())
             }, imageName: Images.definitionQuiz)
         }.padding()
     }

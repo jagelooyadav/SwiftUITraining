@@ -16,7 +16,7 @@ extension CustomNavigationTitle {
     func customNavigationTitle(_ string: String, backAction: (() -> Void)?) -> some View {
         toolbar {
             ToolbarItem(placement: .principal) {
-                Text(string).foregroundColor(.white).font(Font.system(size: 18, weight: .bold, design: .rounded))
+                Text(string).foregroundColor(.black).font(Font.system(size: 18, weight: .bold, design: .rounded))
             }
         }.navigationBarBackButtonHidden(true).navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: backButtonView(action: backAction))

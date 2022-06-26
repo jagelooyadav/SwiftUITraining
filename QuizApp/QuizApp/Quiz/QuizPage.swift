@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuizPage: View, AppBackground {
     @Environment(\.dismiss) private var dismiss
+    
     @ObservedObject private var viewModel = QuizPageViewModel()
     @State var isRsultPageActive = false
     var body: some View {

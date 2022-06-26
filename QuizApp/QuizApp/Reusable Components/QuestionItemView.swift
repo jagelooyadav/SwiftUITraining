@@ -22,12 +22,12 @@ struct QuestionItemView<Item: QuestionItemViewData>: View {
     }
     
     var body: some View {
-        HStack() {
-            Button(action: { data.action?(data as? Item.Object) }) {
-                Image(systemName: data.isSelected ? "dot.circle" : "circle").foregroundColor(.white)
-                Text(String(format: "%C:", 65 + data.index)).bold().foregroundColor(.white)
-                Text(data.title).font(Font.body).foregroundColor(.white)
-            }
+        Button(action: { data.action?(data as? Item.Object) }) {
+            HStack() {
+                Image(systemName: data.isSelected ? "dot.circle" : "circle").foregroundColor(.black)
+                Text(String(format: "%C:", 65 + data.index)).bold().foregroundColor(.black)
+                Text(data.title).font(Font.body).foregroundColor(.black).multilineTextAlignment(.leading)
+            }.frame(alignment: .leading)
         }
     }
 }
