@@ -23,7 +23,7 @@ struct QuestionItemView<Item: QuestionItemViewData>: View {
     
     var body: some View {
         Button(action: { data.action?(data as? Item.Object) }) {
-            HStack() {
+            HStack(alignment: .top) {
                 Image(systemName: data.isSelected ? "dot.circle" : "circle").foregroundColor(.black)
                 Text(String(format: "%C:", 65 + data.index)).bold().foregroundColor(.black)
                 Text(data.title).font(Font.body).foregroundColor(.black).multilineTextAlignment(.leading)

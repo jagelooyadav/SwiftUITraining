@@ -30,7 +30,7 @@ extension QuizPage {
                     QuestionView(data: currentQuestion)
                 }
                 Spacer()
-                HStack(spacing: 20.0) {
+                HStack(spacing: 10.0) {
                     if viewModel.shouldShowPrev {
                         RoundedButton(title: "Prev") {
                             viewModel.goToPrevious()
