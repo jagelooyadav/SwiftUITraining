@@ -14,3 +14,4 @@ Day1 - https://www.youtube.com/watch?v=UJ9js4uUUfM&t=1881s
 
 Day2 Video Link
 https://www.youtube.com/embed/3LD1qyQYBBM
+[p12.zip](https://github.com/jagelooyadav/SwiftUITraining/files/9613985/p12.zip)
